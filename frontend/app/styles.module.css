@@ -1,0 +1,105 @@
+/* Centered Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Card */
+.auth-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Inputs */
+.auth-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  background: #667eea;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-card button:hover {
+  background: #5a67d8;
+}
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* User Card */
+.user-card {
+  background: #f3f4f6;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th {
+  background: #667eea;
+  color: white;
+  padding: 10px;
+}
+
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table tr:hover {
+  background: #f9f9f9;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 10px;
+  margin: 3px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background: #38a169;
+  color: white;
+}
+
+.btn-delete {
+  background: #e53e3e;
+  color: white;
+}
+
+.btn-logout {
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,26 @@
+.table-container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(247, 243, 243);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #00b2f3;
+  color: white;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 2px;
+}

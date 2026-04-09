@@ -4,7 +4,7 @@ from typing import Annotated
 from sqlmodel import select
 
 from db import create_db_and_tables, SessionDep, Student_details,UserDetails ,Session
-from security import router as auth_router, get_current_active_user, User ,hash_password ,verify_password ,create_access_token
+from security import router as auth_router, get_current_active_user, User ,hash_password ,verify_password ,create_access_token,authenticate_user
 from calculations import totalMarks, averageMarks, gradeAssignment
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
@@ -29,11 +29,6 @@ class UserRegister(BaseModel):
     username: str
     password:str
 
-def authenticate_user(db: Session, username: str, password: str):
-    user = db.exec(select(UserDetails).where(UserDetails.username == username)).first()
-    if not user or not verify_password(password, user.password):
-        return None
-    return user
 
 
 @app.on_event("startup")
@@ -124,7 +119,7 @@ def update_student(
         raise HTTPException(status_code=404, detail="Student not found")
 
     db_student.name = student.name
-    db_student.marks = ",".join(map(str, student.marks))
+    db_student.marks =student.marks
     db_student.totalmarks = totalMarks(student.marks)
     db_student.average = averageMarks(student.marks)
     db_student.grade = gradeAssignment(db_student.average)
